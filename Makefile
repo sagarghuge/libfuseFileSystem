@@ -1,9 +1,9 @@
 COMPILER = gcc
-SOURCE = simpleFileSystem.c
+SOURCE = onflyfs.c
 
 build: $(SOURCE)
-	$(COMPILER) $(SOURCE) -o simpleFileSystem `pkg-config fuse --cflags --libs`
-	echo 'To Mount: ./simpleFileSystem -f [mount point]'
+	$(COMPILER) $(SOURCE) -o onflyfs `pkg-config fuse --cflags --libs`
+	echo 'To Mount: ./onflyfs rootDir MountPoint'
 
 clean:
-	rm simpleFileSystem 
+	rm onflyfs 
